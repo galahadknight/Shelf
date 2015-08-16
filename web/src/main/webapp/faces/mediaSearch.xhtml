@@ -9,6 +9,9 @@
 	<ui:composition template="/WEB-INF/template/template.xhtml">
 		<ui:define name="content">
 			<h:form>
+				<h:inputText value="#{mediaItemMB.paramMediaName}" />
+				<h:commandButton action="#{mediaItemMB.cmdSearchMediaItem(mediaItemMB.paramMediaName)}" value="Pesquisar" />
+				
 				<h:dataTable id="tblMediaItem" value="#{mediaItemMB.lstMediaItem}" var="i" 
 				bgcolor="#ffffff" border="1" cellspacing="2" cellpadding="10" width="100%" 
 				style="font-family: 'Open Sans', sans-serif; text-align: center;" rules="all">
@@ -39,8 +42,6 @@
 					</h:column>
 					
 				</h:dataTable>
-				<h:commandButton action="#{mediaItemMB.cmdSearchMediaItem()}" value="Pesquisar" />
-				<h:button value="Pesquisar por Nome" outcome="/faces/mediaSearch?faces-redirect=true" />
 			</h:form>
 		</ui:define>
 	</ui:composition>

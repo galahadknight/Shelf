@@ -23,6 +23,8 @@ public class MediaItemMB implements Serializable {
 	
 	private List<MediaItem> lstMediaItem = new ArrayList<MediaItem>();
 	
+	private String paramMediaName;
+	
 	@PostConstruct
 	public void init() {
 //		lstMediaItem = itemEjb.findAll();
@@ -36,9 +38,22 @@ public class MediaItemMB implements Serializable {
 		this.lstMediaItem = lstMediaItem;
 	}
 	
-	public void cmdPesquisarItens() {
-		lstMediaItem = itemEjb.findAll();
-		System.out.println("MediaItemMB.cmdPesquisarItens()");
+	public void cmdSearchMediaItem() {
+		lstMediaItem = itemEjb.findAllMedia();
+		System.out.println("MediaItemMB.cmdSearchMediaItem()");
+	}
+	
+	public void cmdSearchMediaItem(String mediaName) {
+		lstMediaItem = itemEjb.findMediaItemByName(mediaName);
+		System.out.println("MediaItemMB.cmdSearchMediaItem(mediaName)");
+	}
+
+	public String getParamMediaName() {
+		return paramMediaName;
+	}
+
+	public void setParamMediaName(String paramMediaName) {
+		this.paramMediaName = paramMediaName;
 	}
 
 }

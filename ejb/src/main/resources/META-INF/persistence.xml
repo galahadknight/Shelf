@@ -29,6 +29,7 @@
       <class>com.shelf.dao.BaseDAO</class>
       <class>com.shelf.dao.User</class>
       <class>com.shelf.dao.MediaItem</class>
+      <class>com.shelf.dao.ShelfItem</class>
       <properties>
          <!-- Properties for Hibernate -->
          <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
