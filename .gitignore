@@ -1,0 +1,11 @@
+#Java
+*.class
+target/
+
+.git/
+
+#Eclipse
+.settings/
+build/
+*.classpath
+*.project
