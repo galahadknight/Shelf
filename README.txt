@@ -7,4 +7,4 @@ IDE: Eclipse Mars
 	|_ Plugins:
 		|_ RedHat JBoss Tools
 
-Container: JBoss EAP <definir versão>
+Container: JBoss EAP 6.1+
